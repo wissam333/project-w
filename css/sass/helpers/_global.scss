@@ -1,0 +1,163 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+}
+
+body.preloader *{
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
+}
+
+p,a,form,button,span{
+    font-family: 'VT323', monospace !important;
+    font-size: 23px;
+}
+h1,h2,h3{
+    font-family: 'VT323', monospace !important;
+    font-size: 30px;
+}
+div{
+    font-family: 'VT323', monospace !important;
+}
+.custom-button{
+    border: 1px solid;
+    color: #C060A1;
+    font-size: 1.3rem;
+    &:hover{
+        border: 1px solid #C060A1;
+        border-radius: 4px;
+        color: #FFF;
+        background-color: #C060A1;
+    }
+    &:focus{
+        box-shadow: 0 0 2px 0.25rem rgb(89 84 139 / 55%);
+    }
+}
+
+.overlay{
+    @include overlay;
+    background-image: linear-gradient(#141415, #000000ad);
+    z-index: 2;
+}
+
+.overlay2{
+    @include overlay;
+    background-color: #c8479ed9;
+    border-radius: 25PX;
+    display: none;
+    z-index: 2;
+}
+.overlay3{
+    @include overlay;
+    background-image: linear-gradient(#28282d, #000000c9);
+    z-index: -1;
+}
+// animations anim1
+@keyframes anim1{
+    from{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.anim1{
+    opacity: 0;
+}
+
+// animation anim2
+@keyframes anim2{
+    from{
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.anim2{
+    opacity: 0;
+}
+
+// animation anim3
+@keyframes anim3{
+    from{
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.anim3{
+    opacity: 0;
+}
+
+//animation anim-html
+@keyframes anim-sk1{
+    from {
+        width: 10px;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes anim-sk2{
+    from {
+        width: 10px;
+    }
+    to {
+        width: 80%;
+    }
+}
+@keyframes anim-sk3{
+    from {
+        width: 10px;
+    }
+    to {
+        width: 60%;
+    }
+}
+@keyframes anim-sk4{
+    from {
+        width: 10px;
+    }
+    to {
+        width: 30%;
+    }
+}
+
+
+//background-color for skill bar
+.sk1{
+    background-color: #{$color1} !important;
+    width: 100%;
+}
+.sk2{
+    background-color: #{$color2} !important;
+    width: 80%;
+}
+.sk3{
+    background-color: #{$color3} !important;
+    width: 60%;
+}
+.sk4{
+    background-color: #{$color4} !important;
+    width: 30%;
+}
+
+
+//animation for go-up
+@keyframes go-up{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(30%);
+    }
+}
